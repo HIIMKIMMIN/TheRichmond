@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animate</title>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <style>
+        body{margin: 100px auto;}
+        div{
+            width: 200px; height: 200px;
+            margin: 100px auto;
+            background-color: #faa00f;
+        }
+        p{
+            background-color: aliceblue;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>안녕하세요</p>
+    <script>
+        $(document).ready(function() {
+            $('div').on('mouseover', function(){
+                $('div').animate({
+                    width: 300, height: 300, backgroundColor: '#ffcc00'
+                }, 800, 'easeOutBounce')
+            })
+            $('div').on('mouseleave',function(){
+                $('div').animate({
+                    width: 200, height: 200, backgroundColor: '#faa00f'
+                })
+            }) 
+            $('p').css({
+                backgroundColor: 'seagreen',
+                color: 'gold'
+            })
+        })
+    </script>
+</body>
+</html>
